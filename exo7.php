@@ -7,7 +7,8 @@ $contact=[
 ];
 echo "Fatou: " .$contact["Fatou"] . "<br>";
 $contact["Ali"]="770000004";
-foreach($contact as $contact){
-    print_r("=>" .$contact."<br>");
+foreach($contact as $key=>$value){
+    // print_r("=>" .$contact."<br>");
+    echo"$key : $value"."<br>";
 }
 ?>
