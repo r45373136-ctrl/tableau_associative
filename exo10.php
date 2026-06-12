@@ -1,5 +1,5 @@
 <?php
-$livre=[
+$livres =[
     [
         "titre"=>"L'amour sauvage",
         "auteur"=>"Rokhaya D",
@@ -29,7 +29,32 @@ $livre=[
         "disponible"=>false,
     ],
 ];
-foreach($livre as $key => $value){
-    echo ucfirst($key)." : ".$value."<br>";
+foreach($livres as $key => $livre){
+    echo $livre["auteur"]." : ". $livre["titre"] ."<br>";
 }
+
+echo "Les livres disponibles sont: <br>";
+foreach($livres as $livre){
+    if($livre["disponible"] === true){
+        echo "-" .$livre ["titre"]."<br>";
+    }
+}
+$compter=0;
+foreach($livres as $livre){
+    $compter++ ;
+}
+echo "Le nombre total de livre: ".$compter ."<br>";
+
+$livres[]= $livre=[
+    "titre"=> "La musique",
+    "auteur"=> "Khadija",
+    "disponible"=>false,
+];
+$compter=0;
+foreach($livres as $livre){
+    $compter++ ;
+}
+echo "Le nombre total de livre apres ajout: ".$compter ."<br>";
+
+
 ?>
