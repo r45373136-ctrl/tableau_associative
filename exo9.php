@@ -1,8 +1,8 @@
 <?php
-$personne=[
+$etudiants=[
     [
         "nom"=>"Coumba",
-        "note"=>12,
+        "note"=>2,
     ],
      [
         "nom"=>"Ali",
@@ -21,11 +21,31 @@ $personne=[
         "note"=>9,
     ]
 ];
-foreach($personne as $personne){
-    print_r($personne);
+foreach($etudiants as $etudiant){
+    echo $etudiant["nom"] . " : ". $etudiant["note"] ."<br>";
+    }
+    $somme =0;
+    $nbr =0;
+foreach($etudiants as $etudiant){
+$somme = $somme + $etudiant["note"];
+$nbr++ ;
 }
-// foreach($personne as $personne){
-// }
-    $somme= array_sum($personne["note"]);
+$moyenne =$somme / $nbr;
+echo "La moyenne est de: " .$moyenne . "<br>";
+
+$meilleur =$etudiants[0];
+foreach($etudiants as $etudiant){
+if($etudiant["note"] > $meilleur["note"]){  
+    $meilleur = $etudiant;
+}
+}
+echo  "le meilleur etudiant est: ". $meilleur["nom"] . "<br>";
+
+foreach($etudiants as $etudiant){
+if($etudiant["note"] >= 10){  
+        echo $etudiant["nom"] . " : ". $etudiant["note"] ."<br>";
+
+}
+}
 
 ?>
