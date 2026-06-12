@@ -13,21 +13,22 @@ $personnes=[
         "age"=>30,
     ]
 ];
-foreach($personnes as $personne){
-echo $personne["nom"]. "<br>";
+foreach($personnes as $p){
+echo $p["nom"]. "<br>";
 
 }
-$max= $personnes[0];
-foreach($personnes as $personne){
-    if ($personne["age"] > $max["age"]){
-        $max= $personnes;
+$max = $personnes[0];
+foreach($personnes as $p){
+    if ($p["age"] > $max["age"]){
+        $max= $p;
     }
 }
-    echo "Le plus agé: " . $max["nom"];
+    echo "Le plus agé: " . $max["age"] ."<brj>";
 
-foreach($personne as $personne){
-echo count($personne) ." personnes au total";
-
+$compteur = 0;
+foreach($personnes as $p){
+$compteur++;
 }
+echo "Le nombre total de personne: " . $compteur;
 
 ?>
