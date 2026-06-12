@@ -23,7 +23,7 @@ foreach($personnes as $p){
         $max= $p;
     }
 }
-    echo "Le plus agé: " . $max["age"] ."<brj>";
+    echo "Le plus agé: " . $max["age"] ."<br>";
 
 $compteur = 0;
 foreach($personnes as $p){
