@@ -1,5 +1,5 @@
 <?php
-$personne=[
+$personnes=[
     [
         "nom"=>"Coumba",
         "age"=>12,
@@ -13,14 +13,18 @@ $personne=[
         "age"=>30,
     ]
 ];
-foreach($personne as $personne){
+foreach($personnes as $personne){
 echo $personne["nom"]. "<br>";
 
 }
-foreach($personne as $personne){
-// echo $personne["nom"]. "<br>";
-$max= $max("age");
+$max= $personnes[0];
+foreach($personnes as $personne){
+    if ($personne["age"] > $max["age"]){
+        $max= $personnes;
+    }
 }
+    echo "Le plus agé: " . $max["nom"];
+
 foreach($personne as $personne){
 echo count($personne) ." personnes au total";
 
