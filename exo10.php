@@ -54,7 +54,7 @@ $compter=0;
 foreach($livres as $livre){
     $compter++ ;
 }
-echo "Le nombre total de livre apres ajout: ".$compter ."<br>";
+echo "Le nombre total de livres apres ajout: ".$compter ."<br>";
 
 
 ?>
